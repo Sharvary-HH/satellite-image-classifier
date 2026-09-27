@@ -1,0 +1,3 @@
+# Only for scripts/eval_clip.py (comparison baseline). The service does not need this.
+-r requirements.txt
+transformers==4.46.2

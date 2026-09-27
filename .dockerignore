@@ -1,0 +1,6 @@
+data/
+reports/
+tests/
+**/__pycache__/
+.pytest_cache/
+*.pdf

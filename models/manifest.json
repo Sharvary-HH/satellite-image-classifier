@@ -1,0 +1,21 @@
+{
+  "model_name": "resnet18-eurosat",
+  "model_version": "20260926-113004",
+  "weights_file": "resnet18_eurosat.pt",
+  "weights_sha256": "722fcfc2f5a8cfff4f932162d051660346899dc1277c870d237f7ffcd3c26282",
+  "classes": [
+    "AnnualCrop",
+    "Forest",
+    "Highway",
+    "Industrial",
+    "Residential",
+    "River",
+    "SeaLake"
+  ],
+  "preprocess_version": "v1-rgb-resize224-imagenet-norm",
+  "seed": 42,
+  "epochs": 5,
+  "train_size": 840,
+  "val_size": 210,
+  "best_val_accuracy": 0.9619
+}

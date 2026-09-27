@@ -1,0 +1,17 @@
+__pycache__/
+.pytest_cache/
+.DS_Store
+
+# Runtime output of the service
+data/results.db*
+data/tiles/
+
+# Dataset is not redistributed: unzip the assignment tiles into data/raw/ (see data/README.md)
+data/raw/*
+!data/raw/.gitkeep
+
+# Submission documents are sent separately, not kept in the repo
+SUBMISSION.md
+SUBMISSION.pdf
+SUBMISSION.html
+GalaxEye-Backend_Engineer_ML_Systems-TakeHomeAssignment.pdf

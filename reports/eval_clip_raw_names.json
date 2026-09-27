@@ -1,0 +1,760 @@
+{
+  "model_name": "clip-zero-shot (openai/clip-vit-base-patch32)",
+  "model_version": "prompts=raw_names",
+  "prompts": {
+    "AnnualCrop": "AnnualCrop",
+    "Forest": "Forest",
+    "Highway": "Highway",
+    "Industrial": "Industrial",
+    "Residential": "Residential",
+    "River": "River",
+    "SeaLake": "SeaLake"
+  },
+  "n_tiles": 210,
+  "accuracy": 0.5476,
+  "macro_f1": 0.4993,
+  "weighted_f1": 0.4993,
+  "micro_f1": 0.5476,
+  "per_class": {
+    "AnnualCrop": {
+      "precision": 0.4444,
+      "recall": 0.9333,
+      "f1": 0.6022,
+      "support": 30
+    },
+    "Forest": {
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1": 0.5714,
+      "support": 30
+    },
+    "Highway": {
+      "precision": 0.8,
+      "recall": 0.4,
+      "f1": 0.5333,
+      "support": 30
+    },
+    "Industrial": {
+      "precision": 0.5,
+      "recall": 0.0333,
+      "f1": 0.0625,
+      "support": 30
+    },
+    "Residential": {
+      "precision": 0.4821,
+      "recall": 0.9,
+      "f1": 0.6279,
+      "support": 30
+    },
+    "River": {
+      "precision": 0.7692,
+      "recall": 0.3333,
+      "f1": 0.4651,
+      "support": 30
+    },
+    "SeaLake": {
+      "precision": 0.5102,
+      "recall": 0.8333,
+      "f1": 0.6329,
+      "support": 30
+    }
+  },
+  "confusion_matrix": {
+    "classes": [
+      "AnnualCrop",
+      "Forest",
+      "Highway",
+      "Industrial",
+      "Residential",
+      "River",
+      "SeaLake"
+    ],
+    "rows_true_cols_pred": [
+      [
+        28,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        5,
+        12,
+        2,
+        0,
+        0,
+        0,
+        11
+      ],
+      [
+        11,
+        0,
+        12,
+        1,
+        1,
+        1,
+        4
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        26,
+        1,
+        1
+      ],
+      [
+        3,
+        0,
+        0,
+        0,
+        27,
+        0,
+        0
+      ],
+      [
+        11,
+        0,
+        1,
+        0,
+        1,
+        10,
+        7
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        1,
+        25
+      ]
+    ]
+  },
+  "accuracy_vs_coverage": [
+    {
+      "threshold": 0.0,
+      "coverage": 1.0,
+      "accuracy_on_accepted": 0.5476,
+      "sent_to_review": 0
+    },
+    {
+      "threshold": 0.5,
+      "coverage": 0.5095,
+      "accuracy_on_accepted": 0.6636,
+      "sent_to_review": 103
+    },
+    {
+      "threshold": 0.6,
+      "coverage": 0.3857,
+      "accuracy_on_accepted": 0.6543,
+      "sent_to_review": 129
+    },
+    {
+      "threshold": 0.7,
+      "coverage": 0.2619,
+      "accuracy_on_accepted": 0.7091,
+      "sent_to_review": 155
+    },
+    {
+      "threshold": 0.8,
+      "coverage": 0.1571,
+      "accuracy_on_accepted": 0.697,
+      "sent_to_review": 177
+    },
+    {
+      "threshold": 0.9,
+      "coverage": 0.0667,
+      "accuracy_on_accepted": 0.7857,
+      "sent_to_review": 196
+    },
+    {
+      "threshold": 0.95,
+      "coverage": 0.0286,
+      "accuracy_on_accepted": 1.0,
+      "sent_to_review": 204
+    },
+    {
+      "threshold": 0.99,
+      "coverage": 0.0,
+      "accuracy_on_accepted": null,
+      "sent_to_review": 210
+    }
+  ],
+  "errors": [
+    {
+      "filename": "tile_054.png",
+      "true": "River",
+      "pred": "AnnualCrop",
+      "conf": 0.9464
+    },
+    {
+      "filename": "tile_119.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.9315
+    },
+    {
+      "filename": "tile_101.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.9238
+    },
+    {
+      "filename": "tile_045.png",
+      "true": "River",
+      "pred": "AnnualCrop",
+      "conf": 0.8905
+    },
+    {
+      "filename": "tile_106.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.8483
+    },
+    {
+      "filename": "tile_115.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.8276
+    },
+    {
+      "filename": "tile_098.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.827
+    },
+    {
+      "filename": "tile_102.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.8232
+    },
+    {
+      "filename": "tile_097.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.8231
+    },
+    {
+      "filename": "tile_091.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.8002
+    },
+    {
+      "filename": "tile_184.png",
+      "true": "Highway",
+      "pred": "AnnualCrop",
+      "conf": 0.7927
+    },
+    {
+      "filename": "tile_104.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.7781
+    },
+    {
+      "filename": "tile_050.png",
+      "true": "River",
+      "pred": "AnnualCrop",
+      "conf": 0.754
+    },
+    {
+      "filename": "tile_198.png",
+      "true": "Highway",
+      "pred": "AnnualCrop",
+      "conf": 0.7153
+    },
+    {
+      "filename": "tile_113.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.7005
+    },
+    {
+      "filename": "tile_100.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.7
+    },
+    {
+      "filename": "tile_116.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.6948
+    },
+    {
+      "filename": "tile_040.png",
+      "true": "River",
+      "pred": "AnnualCrop",
+      "conf": 0.693
+    },
+    {
+      "filename": "tile_095.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.6909
+    },
+    {
+      "filename": "tile_174.png",
+      "true": "SeaLake",
+      "pred": "AnnualCrop",
+      "conf": 0.6761
+    },
+    {
+      "filename": "tile_201.png",
+      "true": "Highway",
+      "pred": "AnnualCrop",
+      "conf": 0.6667
+    },
+    {
+      "filename": "tile_131.png",
+      "true": "AnnualCrop",
+      "pred": "SeaLake",
+      "conf": 0.6608
+    },
+    {
+      "filename": "tile_208.png",
+      "true": "Highway",
+      "pred": "Residential",
+      "conf": 0.648
+    },
+    {
+      "filename": "tile_114.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.6461
+    },
+    {
+      "filename": "tile_105.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.622
+    },
+    {
+      "filename": "tile_026.png",
+      "true": "Forest",
+      "pred": "SeaLake",
+      "conf": 0.6055
+    },
+    {
+      "filename": "tile_108.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.6046
+    },
+    {
+      "filename": "tile_057.png",
+      "true": "River",
+      "pred": "AnnualCrop",
+      "conf": 0.603
+    },
+    {
+      "filename": "tile_189.png",
+      "true": "Highway",
+      "pred": "AnnualCrop",
+      "conf": 0.599
+    },
+    {
+      "filename": "tile_110.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.5985
+    },
+    {
+      "filename": "tile_031.png",
+      "true": "River",
+      "pred": "SeaLake",
+      "conf": 0.5965
+    },
+    {
+      "filename": "tile_044.png",
+      "true": "River",
+      "pred": "AnnualCrop",
+      "conf": 0.5888
+    },
+    {
+      "filename": "tile_036.png",
+      "true": "River",
+      "pred": "AnnualCrop",
+      "conf": 0.5867
+    },
+    {
+      "filename": "tile_048.png",
+      "true": "River",
+      "pred": "SeaLake",
+      "conf": 0.5742
+    },
+    {
+      "filename": "tile_181.png",
+      "true": "Highway",
+      "pred": "AnnualCrop",
+      "conf": 0.5143
+    },
+    {
+      "filename": "tile_084.png",
+      "true": "Residential",
+      "pred": "AnnualCrop",
+      "conf": 0.51
+    },
+    {
+      "filename": "tile_191.png",
+      "true": "Highway",
+      "pred": "SeaLake",
+      "conf": 0.4863
+    },
+    {
+      "filename": "tile_096.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.4827
+    },
+    {
+      "filename": "tile_069.png",
+      "true": "Residential",
+      "pred": "AnnualCrop",
+      "conf": 0.4815
+    },
+    {
+      "filename": "tile_092.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.4784
+    },
+    {
+      "filename": "tile_183.png",
+      "true": "Highway",
+      "pred": "AnnualCrop",
+      "conf": 0.473
+    },
+    {
+      "filename": "tile_032.png",
+      "true": "River",
+      "pred": "AnnualCrop",
+      "conf": 0.4676
+    },
+    {
+      "filename": "tile_209.png",
+      "true": "Highway",
+      "pred": "River",
+      "conf": 0.4659
+    },
+    {
+      "filename": "tile_015.png",
+      "true": "Forest",
+      "pred": "SeaLake",
+      "conf": 0.4638
+    },
+    {
+      "filename": "tile_027.png",
+      "true": "Forest",
+      "pred": "AnnualCrop",
+      "conf": 0.4606
+    },
+    {
+      "filename": "tile_118.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.4524
+    },
+    {
+      "filename": "tile_028.png",
+      "true": "Forest",
+      "pred": "SeaLake",
+      "conf": 0.4434
+    },
+    {
+      "filename": "tile_009.png",
+      "true": "Forest",
+      "pred": "SeaLake",
+      "conf": 0.4336
+    },
+    {
+      "filename": "tile_055.png",
+      "true": "River",
+      "pred": "SeaLake",
+      "conf": 0.4226
+    },
+    {
+      "filename": "tile_033.png",
+      "true": "River",
+      "pred": "AnnualCrop",
+      "conf": 0.4206
+    },
+    {
+      "filename": "tile_047.png",
+      "true": "River",
+      "pred": "Residential",
+      "conf": 0.419
+    },
+    {
+      "filename": "tile_030.png",
+      "true": "Forest",
+      "pred": "SeaLake",
+      "conf": 0.4158
+    },
+    {
+      "filename": "tile_202.png",
+      "true": "Highway",
+      "pred": "Industrial",
+      "conf": 0.4022
+    },
+    {
+      "filename": "tile_052.png",
+      "true": "River",
+      "pred": "SeaLake",
+      "conf": 0.39
+    },
+    {
+      "filename": "tile_073.png",
+      "true": "Residential",
+      "pred": "AnnualCrop",
+      "conf": 0.3896
+    },
+    {
+      "filename": "tile_125.png",
+      "true": "AnnualCrop",
+      "pred": "Residential",
+      "conf": 0.3874
+    },
+    {
+      "filename": "tile_152.png",
+      "true": "SeaLake",
+      "pred": "River",
+      "conf": 0.379
+    },
+    {
+      "filename": "tile_194.png",
+      "true": "Highway",
+      "pred": "AnnualCrop",
+      "conf": 0.3735
+    },
+    {
+      "filename": "tile_023.png",
+      "true": "Forest",
+      "pred": "AnnualCrop",
+      "conf": 0.3721
+    },
+    {
+      "filename": "tile_103.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.3617
+    },
+    {
+      "filename": "tile_112.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.3592
+    },
+    {
+      "filename": "tile_187.png",
+      "true": "Highway",
+      "pred": "SeaLake",
+      "conf": 0.3573
+    },
+    {
+      "filename": "tile_035.png",
+      "true": "River",
+      "pred": "AnnualCrop",
+      "conf": 0.3545
+    },
+    {
+      "filename": "tile_117.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.354
+    },
+    {
+      "filename": "tile_120.png",
+      "true": "Industrial",
+      "pred": "SeaLake",
+      "conf": 0.3421
+    },
+    {
+      "filename": "tile_186.png",
+      "true": "Highway",
+      "pred": "AnnualCrop",
+      "conf": 0.3381
+    },
+    {
+      "filename": "tile_034.png",
+      "true": "River",
+      "pred": "Highway",
+      "conf": 0.3378
+    },
+    {
+      "filename": "tile_107.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.3322
+    },
+    {
+      "filename": "tile_093.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.3316
+    },
+    {
+      "filename": "tile_059.png",
+      "true": "River",
+      "pred": "SeaLake",
+      "conf": 0.3297
+    },
+    {
+      "filename": "tile_178.png",
+      "true": "SeaLake",
+      "pred": "AnnualCrop",
+      "conf": 0.3238
+    },
+    {
+      "filename": "tile_042.png",
+      "true": "River",
+      "pred": "SeaLake",
+      "conf": 0.3178
+    },
+    {
+      "filename": "tile_099.png",
+      "true": "Industrial",
+      "pred": "River",
+      "conf": 0.3165
+    },
+    {
+      "filename": "tile_043.png",
+      "true": "River",
+      "pred": "AnnualCrop",
+      "conf": 0.3164
+    },
+    {
+      "filename": "tile_016.png",
+      "true": "Forest",
+      "pred": "SeaLake",
+      "conf": 0.3151
+    },
+    {
+      "filename": "tile_094.png",
+      "true": "Industrial",
+      "pred": "Residential",
+      "conf": 0.3071
+    },
+    {
+      "filename": "tile_046.png",
+      "true": "River",
+      "pred": "SeaLake",
+      "conf": 0.303
+    },
+    {
+      "filename": "tile_196.png",
+      "true": "Highway",
+      "pred": "AnnualCrop",
+      "conf": 0.3024
+    },
+    {
+      "filename": "tile_206.png",
+      "true": "Highway",
+      "pred": "AnnualCrop",
+      "conf": 0.3008
+    },
+    {
+      "filename": "tile_171.png",
+      "true": "SeaLake",
+      "pred": "AnnualCrop",
+      "conf": 0.2953
+    },
+    {
+      "filename": "tile_005.png",
+      "true": "Forest",
+      "pred": "SeaLake",
+      "conf": 0.2884
+    },
+    {
+      "filename": "tile_007.png",
+      "true": "Forest",
+      "pred": "Highway",
+      "conf": 0.2878
+    },
+    {
+      "filename": "tile_004.png",
+      "true": "Forest",
+      "pred": "SeaLake",
+      "conf": 0.287
+    },
+    {
+      "filename": "tile_018.png",
+      "true": "Forest",
+      "pred": "AnnualCrop",
+      "conf": 0.2837
+    },
+    {
+      "filename": "tile_109.png",
+      "true": "Industrial",
+      "pred": "AnnualCrop",
+      "conf": 0.2833
+    },
+    {
+      "filename": "tile_024.png",
+      "true": "Forest",
+      "pred": "SeaLake",
+      "conf": 0.2792
+    },
+    {
+      "filename": "tile_011.png",
+      "true": "Forest",
+      "pred": "SeaLake",
+      "conf": 0.2771
+    },
+    {
+      "filename": "tile_200.png",
+      "true": "Highway",
+      "pred": "SeaLake",
+      "conf": 0.2727
+    },
+    {
+      "filename": "tile_019.png",
+      "true": "Forest",
+      "pred": "Highway",
+      "conf": 0.2614
+    },
+    {
+      "filename": "tile_193.png",
+      "true": "Highway",
+      "pred": "SeaLake",
+      "conf": 0.2492
+    },
+    {
+      "filename": "tile_192.png",
+      "true": "Highway",
+      "pred": "AnnualCrop",
+      "conf": 0.2436
+    },
+    {
+      "filename": "tile_022.png",
+      "true": "Forest",
+      "pred": "AnnualCrop",
+      "conf": 0.2417
+    },
+    {
+      "filename": "tile_029.png",
+      "true": "Forest",
+      "pred": "SeaLake",
+      "conf": 0.2392
+    },
+    {
+      "filename": "tile_008.png",
+      "true": "Forest",
+      "pred": "AnnualCrop",
+      "conf": 0.2372
+    },
+    {
+      "filename": "tile_158.png",
+      "true": "SeaLake",
+      "pred": "AnnualCrop",
+      "conf": 0.2297
+    }
+  ]
+}

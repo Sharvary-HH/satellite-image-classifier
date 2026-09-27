@@ -1,0 +1,243 @@
+{
+  "model_name": "resnet18-eurosat",
+  "model_version": "20260926-113004",
+  "weights_sha256": "722fcfc2f5a8cfff4f932162d051660346899dc1277c870d237f7ffcd3c26282",
+  "preprocess_version": "v1-rgb-resize224-imagenet-norm",
+  "n_tiles": 210,
+  "accuracy": 0.9524,
+  "macro_f1": 0.9529,
+  "weighted_f1": 0.9529,
+  "micro_f1": 0.9524,
+  "per_class": {
+    "AnnualCrop": {
+      "precision": 0.9355,
+      "recall": 0.9667,
+      "f1": 0.9508,
+      "support": 30
+    },
+    "Forest": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    "Highway": {
+      "precision": 0.9286,
+      "recall": 0.8667,
+      "f1": 0.8966,
+      "support": 30
+    },
+    "Industrial": {
+      "precision": 1.0,
+      "recall": 0.9,
+      "f1": 0.9474,
+      "support": 30
+    },
+    "Residential": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    "River": {
+      "precision": 0.8286,
+      "recall": 0.9667,
+      "f1": 0.8923,
+      "support": 30
+    },
+    "SeaLake": {
+      "precision": 1.0,
+      "recall": 0.9667,
+      "f1": 0.9831,
+      "support": 30
+    }
+  },
+  "confusion_matrix": {
+    "classes": [
+      "AnnualCrop",
+      "Forest",
+      "Highway",
+      "Industrial",
+      "Residential",
+      "River",
+      "SeaLake"
+    ],
+    "rows_true_cols_pred": [
+      [
+        29,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        26,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        27,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        30,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        29,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        29
+      ]
+    ]
+  },
+  "accuracy_vs_coverage": [
+    {
+      "threshold": 0.0,
+      "coverage": 1.0,
+      "accuracy_on_accepted": 0.9524,
+      "sent_to_review": 0
+    },
+    {
+      "threshold": 0.5,
+      "coverage": 0.9857,
+      "accuracy_on_accepted": 0.9614,
+      "sent_to_review": 3
+    },
+    {
+      "threshold": 0.6,
+      "coverage": 0.9762,
+      "accuracy_on_accepted": 0.9659,
+      "sent_to_review": 5
+    },
+    {
+      "threshold": 0.7,
+      "coverage": 0.9619,
+      "accuracy_on_accepted": 0.9802,
+      "sent_to_review": 8
+    },
+    {
+      "threshold": 0.8,
+      "coverage": 0.9143,
+      "accuracy_on_accepted": 0.9948,
+      "sent_to_review": 18
+    },
+    {
+      "threshold": 0.9,
+      "coverage": 0.8857,
+      "accuracy_on_accepted": 0.9946,
+      "sent_to_review": 24
+    },
+    {
+      "threshold": 0.95,
+      "coverage": 0.819,
+      "accuracy_on_accepted": 1.0,
+      "sent_to_review": 38
+    },
+    {
+      "threshold": 0.99,
+      "coverage": 0.7048,
+      "accuracy_on_accepted": 1.0,
+      "sent_to_review": 62
+    }
+  ],
+  "errors": [
+    {
+      "filename": "tile_057.png",
+      "true": "River",
+      "pred": "AnnualCrop",
+      "conf": 0.9009
+    },
+    {
+      "filename": "tile_206.png",
+      "true": "Highway",
+      "pred": "River",
+      "conf": 0.7553
+    },
+    {
+      "filename": "tile_198.png",
+      "true": "Highway",
+      "pred": "River",
+      "conf": 0.7492
+    },
+    {
+      "filename": "tile_103.png",
+      "true": "Industrial",
+      "pred": "Highway",
+      "conf": 0.7153
+    },
+    {
+      "filename": "tile_114.png",
+      "true": "Industrial",
+      "pred": "Highway",
+      "conf": 0.6918
+    },
+    {
+      "filename": "tile_130.png",
+      "true": "AnnualCrop",
+      "pred": "River",
+      "conf": 0.6522
+    },
+    {
+      "filename": "tile_182.png",
+      "true": "Highway",
+      "pred": "River",
+      "conf": 0.6323
+    },
+    {
+      "filename": "tile_187.png",
+      "true": "Highway",
+      "pred": "AnnualCrop",
+      "conf": 0.5017
+    },
+    {
+      "filename": "tile_111.png",
+      "true": "Industrial",
+      "pred": "River",
+      "conf": 0.4856
+    },
+    {
+      "filename": "tile_174.png",
+      "true": "SeaLake",
+      "pred": "River",
+      "conf": 0.4347
+    }
+  ]
+}
